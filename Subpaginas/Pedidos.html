@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/public/img/n-1.png">
+    <title>Pedidos</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+    
+    body {
+        background: #CDFFD8;
+        font-family: Irish Grover;
+    }
+
+    .tittle{
+        text-align: center;
+    }
+    .form{
+        background-color: #46F5F5;
+        margin: auto;
+        width: 90%;
+        max-width: 400px;
+        padding: 4.5em 3em;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px -5px rgb(0, 0, 0);
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-top: 20px;
+    }
+
+    
+    .Input_text{
+        width: 90%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .Btn, select {
+        width: 90%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .Btn{
+        width: 90%;
+        background-color: #4CAF50;
+        color: #000;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .Btn:hover {
+        background-color: #45a049;
+    }
+</style>
+<body>
+    <h1 class="tittle">Aqui podras realizar tu pedido</h1>
+    <br>
+    <form id="orderForm" class="form">
+    <h2>Formulario de Pedido</h2>
+    <label for="fname">Nombre:</label>
+    <input type="text" id="fname" name="fname" class="Input_text">
+
+  <label for="lname">Apellido:</label>
+  <input type="text" id="lname" name="lname" class="Input_text">
+
+  <label for="">Contacto:</label>
+  <input type="tel" id="contacto" name="contacto" class="Input_text">
+
+  <label for="product">Producto que desea realizar:</label>
+  <select id="product" name="product">
+    <option value="Producto 1">Camisa personalizadas</option>
+    <option value="Producto 2">Accesorios</option>
+    <option value="Producto 3">Gorras personalizadas</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Realizar Pedido" class="Btn">
+  </form>
+
+<script>
+  document.getElementById('orderForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  var fname = document.getElementById('fname').value;
+  var lname = document.getElementById('lname').value;
+  var product = document.getElementById('product').value;
+
+  alert('Pedido realizado por ' + fname + ' ' + lname + ' para ' + product);
+});
+
+
+</script>  
+    </form>
+</body>
+</html>
